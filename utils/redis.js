@@ -42,9 +42,6 @@ class RedisClient {
 const redisClient = new RedisClient();
 module.exports = redisClient;
 
-
-
-
 // import { createClient } from 'redis';
 
 // class RedisClient {
