@@ -1,5 +1,5 @@
-import { promisify } from 'util';
 import { createClient } from 'redis';
+import { promisify } from 'util';
 
 // class to define methods for commonly used redis commands
 class RedisClient {
@@ -40,7 +40,6 @@ class RedisClient {
 }
 
 const redisClient = new RedisClient();
-
 module.exports = redisClient;
 
 // import { createClient } from 'redis';
