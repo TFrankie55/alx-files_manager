@@ -3,11 +3,12 @@ import { ObjectID } from 'mongodb';
 import { promises as fs } from 'fs';
 import dbClient from '../utils/db';
 import redisClient from '../utils/redis';
-import Queue from 'bull';
 import mime from 'mime-types';
+import Queue from 'bull';
 
 const fileQueue = new Queue('fileQueue', 'redis://127.0.0.1:6379');
 
+//  returns the content of the file document based on the ID
 class FilesController {
   static async getUser(request) {
     const token = request.header('X-Token');
