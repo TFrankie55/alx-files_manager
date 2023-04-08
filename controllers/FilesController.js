@@ -1,10 +1,10 @@
 import { v4 as uuidv4 } from 'uuid';
 import { ObjectID } from 'mongodb';
 import { promises as fs } from 'fs';
-import mime from 'mime-types';
 import dbClient from '../utils/db';
 import redisClient from '../utils/redis';
 import Queue from 'bull';
+import mime from 'mime-types';
 
 const fileQueue = new Queue('fileQueue', 'redis://127.0.0.1:6379');
 
